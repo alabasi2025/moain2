@@ -77,10 +77,10 @@ packages/
   shared/    منطق النطاق النقي بدون إطار — المال/الكميات كأعداد صحيحة، المتوسط المرجّح المتحرك،
              آلات الحالة، دورات نوافذ الطلب بتوقيت المنشأة، الصلاحيات والتنقل لكل دور، مخططات Zod
   server/    Hono على Cloudflare Workers + D1
-             migrations/0000 مخطط الدراسة حرفياً · 0001 قيود السلامة (ADR-0011) · 0002 المصادقة والتكرار
              src/modules/  auth · catalog · ordering · production · fulfillment · inventory · admin · reports · notify · seed
   web/       React 19 + Vite + Tailwind 4 + TanStack Query + Zustand · PWA (Service Worker)
              src/screens/  branch · plant · store · admin  ·  src/print/  نماذج الطباعة  ·  src/ui/  مكونات التطبيق
+migrations/  هجرات D1: 0000 مخطط الدراسة حرفياً · 0001 قيود السلامة (ADR-0011) · 0002 المصادقة والتكرار
 docs/        الدراسة المعمارية (00–06) · سجلات القرارات adr/ · التنفيذ 07-implementation/
 wrangler.toml  إعداد النشر من جذر المستودع (يبني الواجهة ويرفع الخادم)
 ```

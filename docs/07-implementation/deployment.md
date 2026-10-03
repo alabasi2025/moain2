@@ -6,7 +6,7 @@
 | الرابط المباشر | _يُملأ بعد النشر_ |
 | إعداد النشر | `wrangler.toml` في جذر المستودع |
 | البناء | `pnpm install --frozen-lockfile && pnpm --filter @moain/web build` |
-| قاعدة البيانات | الهجرات من `packages/server/migrations` (0000 → 0002) |
+| قاعدة البيانات | الهجرات من `migrations/` في جذر المستودع (0000 → 0002) |
 
 ## أول تشغيل بعد النشر
 1. البيانات الأولية للمنشأة التجريبية: `POST /api/v1/dev/seed` (يعمل فقط عند `DEMO=1`).
