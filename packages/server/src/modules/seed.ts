@@ -26,7 +26,7 @@ export async function createTenant(env: AppEnv['Bindings'], slug: string, name: 
     s.push(db.prep(`INSERT INTO uoms (id, tenant_id, code, name_ar, decimals) VALUES (?, ?, ?, ?, ?)`, U[code]!, t, code, n, dec));
   }
   const C: string[] = [];
-  for (const [i, [n, color]] of ([['المعجنات', '#B7791F'], ['المخبوزات', '#8B5E3C'], ['الكيك', '#9B4D6A'], ['البوتيفورات', '#5B6B8C'], ['الترت', '#3F7D5A']] as const).entries()) {
+  for (const [i, [n, color]] of ([['المعجنات', '#B08D5B'], ['المخبوزات', '#8A6A4F'], ['الكيك', '#A0715E'], ['البوتيفورات', '#7D7A62'], ['الترت', '#6F7F68']] as const).entries()) {
     const id = ulid(); C.push(id);
     s.push(db.prep(`INSERT INTO categories (id, tenant_id, name_ar, color, sort_order) VALUES (?, ?, ?, ?, ?)`, id, t, n, color, (i + 1) * 10));
   }

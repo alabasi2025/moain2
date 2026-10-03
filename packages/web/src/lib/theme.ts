@@ -14,11 +14,10 @@ export function hexToHsl(hex: string): [number, number, number] {
   return [Math.round(h), Math.round(s * 100), Math.round(l * 100)];
 }
 export function applyBrand(hex: string) {
-  const [h, s] = hexToHsl(hex);
-  const root = document.documentElement.style;
-  root.setProperty('--brand-h', String(h));
-  root.setProperty('--brand-s', `${Math.min(Math.max(s, 25), 70)}%`);
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', hex);
+  // The two themes use a fixed, contrast-checked palette; the tenant colour only tints the browser bar.
+  void hexToHsl;
+  const dark = document.documentElement.dataset.theme === 'dark';
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', dark ? '#191512' : (hex && '#F4EFE6'));
 }
 export type ThemeMode = 'light' | 'dark' | 'system';
 export function getTheme(): ThemeMode { return (localStorage.getItem('moain.theme') as ThemeMode | null) ?? 'system'; }
