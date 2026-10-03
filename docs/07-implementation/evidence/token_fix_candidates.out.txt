@@ -1,0 +1,9 @@
+Candidate token corrections (largest lightness that still passes AA 4.5 on --bg/white):
+ --ink-3 light  hsl(30 8% L): (44, 4.56)
+ --success-ink  hsl(152 55% L): (34, 4.5)
+ --warning-ink  hsl(38 92% L): (33, 4.62)
+ --info-ink     hsl(210 70% L): (47, 4.54)
+ --warning fill non-text (3:1 on white) hsl(38 92% L): (42, 3.0)
+ dark --ink-3 on dark surface hsl(36 8% L) min: (51, 4.59)
+ dark primary fill w/ white text hsl(28 42% L) max: (43, 4.6)  vs dark surface (non-text 3:1): 3.27
+ dark hero brand-50 -> hsl(28 30% 14%) with dark ink: 13.5

@@ -1,0 +1,15 @@
+OK   mandatory MA scenario still passes with amendments :: 30 / 18000
+OK   back-dated movement rejected :: LEDGER_BACKDATED
+OK   stale-balance (race) movement rejected :: LEDGER_CHAIN_BROKEN
+OK   value chain enforced :: LEDGER_VALUE_CHAIN_BROKEN
+OK   date-only occurred_at rejected :: occurred_at must be YYYY-MM-DDTHH:MM:SS.sssZ
+OK   view == cache after amendments :: equal
+OK   ledger still immutable :: 
+OK   duplicate global role rejected :: UNIQUE constraint failed: index 'ux_user_roles_scope'
+OK   posted voucher cannot revert to draft :: VOUCHER_STATUS_REGRESSION
+OK   posted voucher cannot be deleted :: only draft vouchers can be deleted
+OK   posted -> cancelled still allowed :: 
+OK   committed count cannot reopen :: COUNT_STATUS_REGRESSION
+OK   carried-value: stock fully issued -> value exactly 0 :: qty=0 value=0, last unit cost 603
+
+SUMMARY: 13 / 13 ok

@@ -1,0 +1,18 @@
+SQLite 3.46.1
+PASS MA scenario 100@500 +50@800 -120 => 30 / 18000 :: (30.0, 18000)
+PASS ledger UPDATE blocked :: stock_movements is append-only: corrections are new reversal rows
+PASS ledger DELETE blocked :: stock_movements is append-only: corrections are new reversal rows
+FINDING back-dated post keeps view == cache :: v_stock_on_hand=150.0 stock_balances=130.0 (true balance 130)
+FINDING occurred_at format-agnostic ordering :: view picked qty=100.0 (expected 110 = latest)
+FINDING user_roles rejects duplicate global role :: 2 identical rows accepted (NULL in composite PK)
+FINDING delivery_lines immutable :: UPDATE delivery_lines succeeded
+FINDING deliveries DELETE blocked :: DELETE deliveries succeeded (lines cascaded)
+FINDING rate-integer rounding loses no value :: exact rate=603.3333 stored=603; after issuing 149: qty*rate value=603, carried value=653
+FINDING re-order after cancellation (same day/window) :: blocked: UNIQUE constraint failed: orders.branch_id, orders.window_id, orders.delivery_date
+FINDING every table has tenant_id :: 16 tables without it: user_roles, trusted_devices, sessions, uom_conversions, push_subscriptions, product_availability, order_lines, order_revisions, order_exceptions, production_sections, production_snapshots, delivery_lines, voucher_lines, stock_balances, count_lines, recipe_lines
+
+SUMMARY: 3 pass / 8 findings
+
+--- extra probes (frozen-document loopholes) ---
+FINDING posted voucher frozen :: status posted->draft accepted, then line qty edited to 5000.0
+FINDING committed count read-only (G6) :: committed->open accepted, then counted_qty edited to 99.0
