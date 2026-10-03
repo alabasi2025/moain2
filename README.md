@@ -23,6 +23,11 @@
 
 ## فهرس الوثائق
 
+### 00 — نقطة البداية
+- [`docs/00-client-requests.md`](docs/00-client-requests.md) — **طلبات العميل وصاحب المشروع بنصها الحرفي** + المبادئ الثمانية الحاكمة
+- [`AGENT_PROMPT.md`](AGENT_PROMPT.md) — **برومبت جاهز لوكيل/مطور جديد** يقرأ الدراسة ويبني النظام
+- [`docs/07-implementation/`](docs/07-implementation/) — يُملأ من الوكيل المنفّذ (فهمه، خطته، تقدمه)
+
 ### 01 — التحليل
 - [`docs/01-analysis/00-executive-summary.md`](docs/01-analysis/00-executive-summary.md) — الملخص التنفيذي والقرارات الكبرى
 - [`docs/01-analysis/01-requirements-analysis.md`](docs/01-analysis/01-requirements-analysis.md) — تفكيك طلب العميل سطراً بسطر + المتطلبات الضمنية
