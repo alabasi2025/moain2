@@ -12,7 +12,10 @@ SCHEMA = (ROOT / "docs/02-domain/04-schema.sql").read_text(encoding="utf-8")
 AMEND = r"""
 -- (a) occurred_at must be full ISO-8601 UTC with ms → string order == time order
 CREATE TRIGGER trg_sm_occurred_at_format BEFORE INSERT ON stock_movements
-WHEN NEW.occurred_at NOT GLOB '[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]T[0-9][0-9]:[0-9][0-9]:[0-9][0-9].[0-9][0-9][0-9]Z'
+WHEN length(NEW.occurred_at) <> 24 OR substr(NEW.occurred_at, 5, 1) <> '-' OR substr(NEW.occurred_at, 8, 1) <> '-'
+  OR substr(NEW.occurred_at, 11, 1) <> 'T' OR substr(NEW.occurred_at, 14, 1) <> ':' OR substr(NEW.occurred_at, 17, 1) <> ':'
+  OR substr(NEW.occurred_at, 20, 1) <> '.' OR substr(NEW.occurred_at, 24, 1) <> 'Z'
+  OR datetime(substr(NEW.occurred_at, 1, 19)) IS NULL
 BEGIN SELECT RAISE(ABORT, 'occurred_at must be YYYY-MM-DDTHH:MM:SS.sssZ'); END;
 
 -- (b) ledger chain integrity: each movement must continue the latest balance of its

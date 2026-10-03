@@ -1,0 +1,13 @@
+{
+  "name": "moain",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@9.15.9",
+  "scripts": {
+    "dev": "pnpm --filter @moain/server db:reset && pnpm --parallel --filter @moain/server --filter @moain/web dev",
+    "build": "pnpm --filter @moain/web build",
+    "start": "pnpm build && pnpm --filter @moain/server start",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck"
+  }
+}

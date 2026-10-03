@@ -1,0 +1,12 @@
+import { t } from './i18n';
+export type Tone = 'info' | 'success' | 'warning' | 'danger' | 'violet' | 'brand' | 'muted';
+const ORDER: Record<string, Tone> = { draft: 'muted', submitted: 'info', locked: 'violet', in_production: 'warning', ready: 'success', partially_delivered: 'warning', delivered: 'success', cancelled: 'danger' };
+const PO: Record<string, Tone> = { open: 'info', locked: 'violet', in_progress: 'warning', completed: 'success', cancelled: 'danger' };
+const VOUCHER: Record<string, Tone> = { draft: 'muted', posted: 'success', cancelled: 'danger' };
+const STOCK: Record<string, Tone> = { ok: 'success', low: 'warning', out: 'danger' };
+const EXC: Record<string, Tone> = { pending: 'warning', approved: 'success', rejected: 'danger', expired: 'muted' };
+export const orderTone = (s: string) => ({ tone: ORDER[s] ?? 'muted', label: t(`orderStatus.${s}`) });
+export const poTone = (s: string) => ({ tone: PO[s] ?? 'muted', label: t(`poStatus.${s}`) });
+export const voucherTone = (s: string) => ({ tone: VOUCHER[s] ?? 'muted', label: t(`voucherStatus.${s}`) });
+export const stockTone = (s: string) => ({ tone: STOCK[s] ?? 'muted', label: t(`stockStatus.${s}`) });
+export const excTone = (s: string) => ({ tone: EXC[s] ?? 'muted', label: t(`exceptionStatus.${s}`) });

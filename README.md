@@ -100,3 +100,18 @@
 | الخطوط | IBM Plex Sans Arabic (واجهة) + Cairo (طباعة/عناوين) | Tajawal, Noto Kufi |
 
 > التفاصيل والتبريرات في [`docs/adr/`](docs/adr/).
+
+---
+
+## Local run (M0)
+
+```bash
+pnpm install
+pnpm --filter @moain/web build          # builds the web app into packages/web/dist
+cd packages/server && ./scripts-restart.sh   # resets local D1 + migrations + wrangler dev on 8787 + seed
+node scripts/demo-data.mjs               # sample data: opening balance + receipt + issue + two branch orders
+```
+Open `http://localhost:8787`. Demo accounts (password `123456`):
+owner@alnoor.ye (owner) · sitteen@alnoor.ye / hadda@alnoor.ye (branches) · plant@alnoor.ye (plant manager) · staff@alnoor.ye (plant staff) · store@alnoor.ye (storekeeper).
+
+Tests: `pnpm --filter @moain/shared test` · `node packages/server/test/e2e-api.mjs` · `packages/server/test/db-invariants.sh` · `node packages/server/test/isolation.mjs`

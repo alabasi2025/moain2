@@ -1,0 +1,24 @@
+{
+  "name": "@moain/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "db:reset": "rm -rf .wrangler/state && wrangler d1 migrations apply moain --local",
+    "dev": "wrangler dev --port 8787 --ip 0.0.0.0",
+    "start": "wrangler dev --port 8787 --ip 0.0.0.0",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@moain/shared": "workspace:^",
+    "hono": "4",
+    "zod": "3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261003.1",
+    "typescript": "5.7",
+    "vitest": "3",
+    "wrangler": "4"
+  }
+}
