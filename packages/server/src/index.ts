@@ -54,6 +54,22 @@ app.onError((e, c) => {
   return c.json({ ok: false, error: { code: 'INTERNAL', message_ar: 'حدث خطأ غير متوقع — حاول مجدداً', details: {} }, meta }, 500);
 });
 
+/**
+ * Lazy auto-lock (replaces the cron trigger, unsupported on the hosted platform):
+ * at most once a minute per isolate, any API request kicks off the cutoff check in the background.
+ * Every page that shows production data also re-checks, so a closed window is locked before anyone sees it.
+ */
+let lastLockCheck = 0;
+app.use('/api/*', async (c, next) => {
+  const now = Date.now();
+  if (now - lastLockCheck > 60_000) {
+    lastLockCheck = now;
+    const job = cronLock(c.env).catch((e) => console.error('[lazy-lock]', String(e)));
+    try { c.executionCtx.waitUntil(job); } catch { await job; }
+  }
+  await next();
+});
+
 const api = new Hono<AppEnv>();
 api.get('/health', (c) => c.json({ ok: true }));
 api.route('/auth', auth);

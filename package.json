@@ -9,5 +9,8 @@
     "start": "pnpm build && pnpm --filter @moain/server start",
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "wrangler": "4"
   }
 }

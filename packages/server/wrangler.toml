@@ -19,5 +19,4 @@ migrations_dir = "migrations"
 DEMO = "1"
 DEFAULT_TENANT = "alnoor"
 
-[triggers]
-crons = ["* * * * *"]
+# No cron on the hosted platform: window cutoffs are locked lazily on incoming requests (src/index.ts).

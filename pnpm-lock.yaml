@@ -6,7 +6,11 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      wrangler:
+        specifier: '4'
+        version: 4.147.0(@cloudflare/workers-types@5.20261003.1)
 
   packages/server:
     dependencies:
