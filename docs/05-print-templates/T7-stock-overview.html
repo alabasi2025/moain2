@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تقرير حالة المخزون — أكتوبر 2026</title>
+<link rel="stylesheet" href="print.css">
+<style>
+  td, th { font-size: 9pt; padding: 1.6mm 1.5mm; }
+  td.uom:first-child { white-space: nowrap; font-family: "IBM Plex Mono", monospace; direction: ltr; }
+  .st { display:inline-block; width: 7px; height: 7px; border-radius: 50%; margin-inline-end: 4px; vertical-align: middle; }
+  .st.ok { background: #2E8B57; } .st.low { background: #C9A227; } .st.out { background: #C0392B; }
+  tr.low td.name { color: #8A6D0B; } tr.out td.name { color: #A93226; font-weight: 700; }
+  .legend { display:flex; gap: 14px; font-size: 8.5pt; color: var(--ink-2); margin-bottom: 3mm; }
+  @media print { @page { size: A4 landscape; } }
+</style>
+</head>
+<body>
+
+<div class="toolbar no-print">
+  <button class="primary" onclick="window.print()">🖨️ طباعة</button>
+  <button>⤓ تصدير Excel</button>
+  <span class="hint">T7 — تقرير حالة المخزون للفترة · الأعمدة الـ 11 التي طلبها العميل بالضبط · A4 أفقي</span>
+  <span class="spacer"></span>
+  <button onclick="history.back()">إغلاق</button>
+</div>
+
+<article class="sheet landscape">
+  <header class="doc-header">
+    <div class="brand"><div class="logo">ن</div><div><h1>مخابز النور</h1><p class="sub">المخزن المركزي · تقرير فتري</p></div></div>
+    <div class="doc-id"><div><span class="num">STK-2026-10</span></div><div>الفترة: <b>1 – 31 أكتوبر 2026</b></div><div>أُنشئ: 3/10/2026 11:50 م · محمد الحميري</div></div>
+  </header>
+
+  <div class="title-band"><h2>حالة المخزون — المواد الخام</h2><div class="meta">طريقة التقييم: <b>متوسط مرجّح متحرك</b> · العملة: <b>ريال يمني</b></div></div>
+
+  <div class="stats">
+    <div class="stat"><div class="n">14</div><div class="l">مادة نشطة</div></div>
+    <div class="stat"><div class="n">2</div><div class="l">تحت حد الأمان</div></div>
+    <div class="stat"><div class="n">1</div><div class="l">نفدت</div></div>
+    <div class="stat"><div class="n">1,226,910</div><div class="l">قيمة المخزون (ر.ي)</div></div>
+  </div>
+
+  <div class="legend"><span><i class="st ok"></i> طبيعي</span><span><i class="st low"></i> تحت حد الأمان</span><span><i class="st out"></i> نفد</span></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>كود المادة</th><th>التصنيف</th><th>اسم المادة الخام</th><th>تكلفة الوحدة</th><th>وحدة القياس</th><th>حد الأمان</th>
+        <th>رصيد أول المدة</th><th>إجمالي الوارد</th><th>إجمالي الصادر</th><th>الرصيد المتبقي</th><th>تكلفة الرصيد الإجمالية</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="uom">RM-001</td><td>دقيق ونشويات</td><td class="name"><i class="st ok"></i>دقيق فاخر</td><td class="money">600</td><td class="uom">كجم</td><td class="num">50</td><td class="num">100</td><td class="num">50</td><td class="num">120</td><td class="total">30</td><td class="money">18,000</td></tr>
+      <tr class="low"><td class="uom">RM-002</td><td>دقيق ونشويات</td><td class="name"><i class="st low"></i>دقيق أسمر</td><td class="money">550</td><td class="uom">كجم</td><td class="num">30</td><td class="num">45</td><td class="num">0</td><td class="num">27</td><td class="total">18</td><td class="money">9,900</td></tr>
+      <tr><td class="uom">RM-003</td><td>دقيق ونشويات</td><td class="name"><i class="st ok"></i>نشا ذرة</td><td class="money">900</td><td class="uom">كجم</td><td class="num">5</td><td class="num">12</td><td class="num">0</td><td class="num">3</td><td class="total">9</td><td class="money">8,100</td></tr>
+      <tr><td class="uom">RM-004</td><td>سكريات</td><td class="name"><i class="st ok"></i>سكر ناعم</td><td class="money">650</td><td class="uom">كجم</td><td class="num">20</td><td class="num">8</td><td class="num">25</td><td class="num">0</td><td class="total">33</td><td class="money">21,450</td></tr>
+      <tr><td class="uom">RM-005</td><td>سكريات</td><td class="name"><i class="st ok"></i>سكر بودرة</td><td class="money">820</td><td class="uom">كجم</td><td class="num">10</td><td class="num">22</td><td class="num">0</td><td class="num">6</td><td class="total">16</td><td class="money">13,120</td></tr>
+      <tr><td class="uom">RM-006</td><td>سكريات</td><td class="name"><i class="st ok"></i>عسل طبيعي</td><td class="money">4,500</td><td class="uom">كجم</td><td class="num">3</td><td class="num">8</td><td class="num">0</td><td class="num">2</td><td class="total">6</td><td class="money">27,000</td></tr>
+      <tr><td class="uom">RM-009</td><td>دهون وزيوت</td><td class="name"><i class="st ok"></i>زبدة طبيعية</td><td class="money">3,180</td><td class="uom">كجم</td><td class="num">15</td><td class="num">42</td><td class="num">20</td><td class="num">0</td><td class="total">62</td><td class="money">197,160</td></tr>
+      <tr><td class="uom">RM-010</td><td>دهون وزيوت</td><td class="name"><i class="st ok"></i>زيت نباتي</td><td class="money">1,100</td><td class="uom">لتر</td><td class="num">20</td><td class="num">60</td><td class="num">0</td><td class="num">18</td><td class="total">42</td><td class="money">46,200</td></tr>
+      <tr><td class="uom">RM-011</td><td>ألبان وبيض</td><td class="name"><i class="st ok"></i>بيض</td><td class="money">95</td><td class="uom">حبة</td><td class="num">300</td><td class="num">1,200</td><td class="num">0</td><td class="num">480</td><td class="total">720</td><td class="money">68,400</td></tr>
+      <tr class="out"><td class="uom">RM-013</td><td>ألبان وبيض</td><td class="name"><i class="st out"></i>حليب سائل</td><td class="money">900</td><td class="uom">لتر</td><td class="num">20</td><td class="num">30</td><td class="num">0</td><td class="num">30</td><td class="total">0</td><td class="money">0</td></tr>
+      <tr><td class="uom">RM-012</td><td>خمائر ومحسنات</td><td class="name"><i class="st ok"></i>خميرة فورية</td><td class="money">1,780</td><td class="uom">كجم</td><td class="num">3</td><td class="num">6</td><td class="num">5</td><td class="num">0</td><td class="total">11</td><td class="money">19,580</td></tr>
+      <tr class="low"><td class="uom">RM-014</td><td>خمائر ومحسنات</td><td class="name"><i class="st low"></i>بيكنج باودر</td><td class="money">2,400</td><td class="uom">كجم</td><td class="num">2</td><td class="num">3</td><td class="num">0</td><td class="num">1.5</td><td class="total">1.5</td><td class="money">3,600</td></tr>
+      <tr><td class="uom">RM-020</td><td>نكهات وإضافات</td><td class="name"><i class="st ok"></i>شوكولاتة خام</td><td class="money">6,200</td><td class="uom">كجم</td><td class="num">10</td><td class="num">30</td><td class="num">0</td><td class="num">8</td><td class="total">22</td><td class="money">136,400</td></tr>
+      <tr><td class="uom">RM-030</td><td>تغليف</td><td class="name"><i class="st ok"></i>علب كيك متوسطة</td><td class="money">350</td><td class="uom">حبة</td><td class="num">200</td><td class="num">2,000</td><td class="num">0</td><td class="num">120</td><td class="total">1,880</td><td class="money">658,000</td></tr>
+      <tr class="subtotal"><td colspan="10">إجمالي قيمة المخزون في نهاية الفترة</td><td class="money" style="font-weight:700">1,226,910</td></tr>
+    </tbody>
+  </table>
+
+  <footer class="doc-footer">
+    <div class="qr"><span>QR</span></div>
+    <div class="center"><div class="foot-text">الأرصدة مشتقة من دفتر الحركات غير القابل للتعديل · كل رقم قابل للتتبع إلى سنده</div><div>الفترة 1–31/10/2026 · طُبع 3/10/2026 11:50 م</div></div>
+    <div>صفحة 1 من 1<br>نظام مُعين</div>
+  </footer>
+</article>
+</body>
+</html>
