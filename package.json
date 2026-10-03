@@ -8,7 +8,8 @@
     "build": "pnpm --filter @moain/web build",
     "start": "pnpm build && pnpm --filter @moain/server start",
     "test": "pnpm -r test",
-    "typecheck": "pnpm -r typecheck"
+    "typecheck": "pnpm -r typecheck",
+    "bundle": "pnpm --filter @moain/web build && wrangler deploy --dry-run --outdir .wrangler/bundle --config packages/server/wrangler.toml && cp .wrangler/bundle/index.js deploy/worker.js"
   },
   "devDependencies": {
     "wrangler": "4"

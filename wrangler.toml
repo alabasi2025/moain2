@@ -1,12 +1,10 @@
 # Root deploy config (hosted Workers for Platform pipeline deploys from the repo root).
 # Local development uses packages/server/wrangler.toml — keep both in sync.
+# deploy/worker.js is the pre-bundled server (rebuild: pnpm bundle) so the deploy needs no package install.
 name = "moain"
-main = "packages/server/src/index.ts"
+main = "deploy/worker.js"
 compatibility_date = "2025-09-01"
 compatibility_flags = ["nodejs_compat"]
-
-[build]
-command = "pnpm install --frozen-lockfile && pnpm --filter @moain/web build"
 
 [assets]
 directory = "packages/web/dist"
