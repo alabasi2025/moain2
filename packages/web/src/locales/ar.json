@@ -1,0 +1,21 @@
+{
+  "app": { "name": "مُعين", "tagline": "نظام الطلبيات والإنتاج والمخزون" },
+  "nav": { "home": "الرئيسية", "dashboard": "اللوحة", "order": "طلبيتي", "receive": "الاستلام", "history": "السجل", "production": "الإنتاج", "deliver": "التسليم", "reports": "التقارير", "movement": "حركة جديدة", "materials": "المواد", "vouchers": "السندات", "stock": "المخزون", "settings": "الإعدادات", "more": "المزيد" },
+  "orderStatus": { "draft": "مسودة", "submitted": "مُرسَلة", "locked": "مقفلة", "in_production": "قيد الإنتاج", "ready": "جاهزة", "partially_delivered": "تسليم جزئي", "delivered": "مُسلَّمة", "cancelled": "ملغاة" },
+  "poStatus": { "open": "مفتوح", "locked": "مقفل", "in_progress": "قيد الإنتاج", "completed": "مكتمل", "cancelled": "ملغى" },
+  "voucherStatus": { "draft": "مسودة", "posted": "مُرحَّل", "cancelled": "ملغى" },
+  "voucherKind": { "opening": "رصيد افتتاحي", "receipt": "وارد (توريد)", "issue": "صارف", "adjustment": "تسوية", "transfer": "تحويل", "waste": "هالك", "return_in": "مرتجع وارد", "return_out": "مرتجع للمورد" },
+  "voucherKindShort": { "opening": "افتتاحي", "receipt": "وارد", "issue": "صارف", "adjustment": "تسوية", "transfer": "تحويل", "waste": "هالك", "return_in": "مرتجع", "return_out": "مرتجع" },
+  "reason": { "opening": "رصيد افتتاحي", "receipt": "توريد", "issue": "صرف", "adjustment": "تسوية", "transfer": "تحويل", "waste": "هالك", "return": "مرتجع", "count": "جرد", "reversal": "عكس" },
+  "stockStatus": { "ok": "طبيعي", "low": "تحت الحد", "out": "نفد" },
+  "exceptionStatus": { "pending": "بانتظار القرار", "approved": "مقبول", "rejected": "مرفوض", "expired": "منتهي" },
+  "roles": { "owner": "المالك", "admin": "مدير النظام", "plant_manager": "مدير المعمل", "plant_staff": "موظف معمل", "branch_user": "مستخدم فرع", "storekeeper": "أمين مخزن", "viewer": "مشاهد" },
+  "locKind": { "plant": "معمل", "branch": "فرع", "warehouse": "مخزن" },
+  "purpose": { "production": "إنتاج", "cleaning": "تنظيف", "other": "أخرى" },
+  "common": {
+    "save": "حفظ", "cancel": "إلغاء", "close": "إغلاق", "confirm": "تأكيد", "retry": "إعادة المحاولة", "back": "رجوع", "edit": "تعديل", "add": "إضافة", "all": "الكل", "search": "بحث",
+    "print": "طباعة", "export": "تصدير Excel", "done": "تم", "clear": "مسح", "next": "التالي", "loading": "جارٍ التحميل…", "required": "مطلوب", "optional": "اختياري",
+    "offline": "غير متصل — سيُرسَل تلقائياً عند عودة الاتصال", "pending": "بانتظار الإرسال", "synced": "تمت المزامنة", "errorTitle": "تعذّر التحميل", "errorTech": "تفاصيل تقنية",
+    "active": "نشط", "inactive": "موقوف", "note": "ملاحظة", "notes": "ملاحظات", "from": "من", "to": "إلى", "today": "اليوم", "yesterday": "أمس", "tomorrow": "غداً", "logout": "تسجيل الخروج"
+  }
+}

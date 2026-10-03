@@ -12,5 +12,8 @@
 | [0008](0008-ledger-immutable.md) | دفتر مخزون append-only مع متوسط متحرك | مقبول |
 | [0009](0009-multi-tenant-day-one.md) | tenant_id من اليوم الأول | مقبول |
 | [0010](0010-ulid-client-ids.md) | ULID مُولَّدة على الجهاز + client_uuid للـ idempotency | مقبول |
+| [0011](0011-schema-integrity-amendments.md) | تعديلات سلامة إضافية على المخطط (migration 0001) | **مقترح** |
+| [0012](0012-platform-constraints.md) | مواءمة الوثائق مع قيود المنصة (Lighthouse PWA، D1 batch، KV، Argon2، SSE) | **مقترح** |
+| [0013](0013-token-contrast-fixes.md) | تصحيحات دنيا لتباين الرموز (WCAG AA) | **مقترح** |
 
 الصيغة: السياق → القرار → البدائل المرفوضة → العواقب.
